@@ -10,7 +10,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [new HtmlWebpackPlugin({
-        title: 'Kanban Boards',
+        title: 'Kanban Board',
         template: path.join(__dirname, 'client/templates/index.ejs'),
         filename: 'index.html'
     })],

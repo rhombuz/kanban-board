@@ -1,9 +1,9 @@
-import React, { Fragment, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import Window from './Window';
 import ITEM_TYPE from '../data/types';
 
-const ITEM = ({ item, index, moveItem, status }) => {
+const Item = ({ item, index, moveItem, status }) => {
     const ref = useRef(null);
 
     const [, drop] = useDrop({
@@ -38,12 +38,12 @@ const ITEM = ({ item, index, moveItem, status }) => {
     });
 
     const [{ isDragging }, drag] = useDrag({
+        type: ITEM_TYPE,
         item: { type: ITEM_TYPE, ...item, index },
         collect: monitor => ({
             isDragging: monitor.isDragging()
         })
-    }
-    );
+    });
 
     // For opening and closing of the tasks
     const [show, setShow] = useState(false);
@@ -58,7 +58,7 @@ const ITEM = ({ item, index, moveItem, status }) => {
         <>
             <div
                 ref={ref}
-                style={{ opacity: isDragging ? 0 : 1}}
+                style={{ opacity: isDragging ? 0 : 1 }}
                 className="item"
                 onClick={onOpen}
             >
