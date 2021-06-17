@@ -50,7 +50,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'build'),
         compress: true,
         proxy: {
-            '/api': 'http://localhost:4000'
+            '/api': 'npm'
         }
     },
     resolve: {
