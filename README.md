@@ -1,5 +1,7 @@
 A kanban board is an agile project management tool designed to help visualize work, limit work-in-progress, and maximize efficiency (or flow). Kanban boards use cards, columns, and continuous improvement to help technology and service teams commit to the right amount of work, and get it done!
 
+Live Demo: https://friendly-varahamihira-50d38b.netlify.app/
+
 Architectural Extensions
 
 Modifications in tables and api endpoints:
